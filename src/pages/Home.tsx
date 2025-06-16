@@ -6,7 +6,8 @@ import {
   Calendar, 
   FileText, 
   Eye,
-  ArrowRight
+  ArrowRight,
+  Shield
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -61,6 +62,22 @@ const Home = () => {
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
       path: '/pdf'
+    },
+    {
+      icon: Shield,
+      title: 'Nöbet Yönetimi',
+      description: 'Okul nöbet programlarını oluşturun ve yönetin',
+      color: 'text-red-600',
+      bgColor: 'bg-red-50',
+      path: '/duty-management'
+    },
+    {
+      icon: FileText,
+      title: 'Nöbet Raporları',
+      description: 'Nöbet istatistiklerini görüntüleyin ve rapor alın',
+      color: 'text-yellow-600',
+      bgColor: 'bg-yellow-50',
+      path: '/duty-reports'
     }
   ];
 
@@ -87,10 +104,10 @@ const Home = () => {
             </div>
           </div>
           <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-            İDE Okulları Ders Programı Sistemi
+            İDE Okulları Yönetim Sistemi
           </h1>
           <p className="text-sm md:text-base text-gray-600 mb-4 max-w-2xl mx-auto">
-            Okul ders programlarını kolayca oluşturun, yönetin ve PDF olarak indirin. 
+            Okul ders programlarını ve nöbet sistemini kolayca oluşturun, yönetin ve PDF olarak indirin. 
             Çakışma kontrolü, otomatik saatler ve profesyonel çıktılar.
           </p>
         </div>
@@ -98,7 +115,7 @@ const Home = () => {
 
       {/* Minimal Features Grid */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -125,7 +142,7 @@ const Home = () => {
       {/* Minimal Quick Info */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-center">
             <div>
               <div className="text-lg font-bold text-gray-900">Çakışma Kontrolü</div>
               <div className="text-xs text-gray-600">Otomatik çakışma tespiti</div>
@@ -139,6 +156,10 @@ const Home = () => {
               <div className="text-xs text-gray-600">Yemek ve mola saatleri</div>
             </div>
             <div>
+              <div className="text-lg font-bold text-gray-900">Nöbet Sistemi</div>
+              <div className="text-xs text-gray-600">Haftalık nöbet yönetimi</div>
+            </div>
+            <div>
               <div className="text-lg font-bold text-gray-900">Güvenli Saklama</div>
               <div className="text-xs text-gray-600">Firebase altyapısı</div>
             </div>
@@ -150,7 +171,7 @@ const Home = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="text-center">
           <p className="text-xs text-gray-500">
-            Modern, kullanıcı dostu ve güvenilir ders programı yönetim sistemi
+            Modern, kullanıcı dostu ve güvenilir okul yönetim sistemi
           </p>
         </div>
       </div>

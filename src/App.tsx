@@ -12,6 +12,8 @@ import Schedules from './pages/Schedules';
 import AllSchedules from './pages/AllSchedules';
 import ClassSchedules from './pages/ClassSchedules';
 import PDFExport from './pages/PDFExport';
+import DutyManagement from './pages/DutyManagement';
+import DutyReports from './pages/DutyReports';
 import ToastContainer from './components/UI/ToastContainer';
 
 function App() {
@@ -61,6 +63,8 @@ function App() {
               <Route path="class-schedules" element={<ClassSchedules />} />
               <Route path="all-schedules" element={<AllSchedules />} />
               <Route path="pdf" element={<PDFExport />} />
+              <Route path="duty-management" element={<DutyManagement />} />
+              <Route path="duty-reports" element={<DutyReports />} />
             </Route>
           </Routes>
         </Router>

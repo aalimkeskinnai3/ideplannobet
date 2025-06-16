@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Users, Building, BookOpen, Calendar, LogOut, Eye, Menu, X, GraduationCap, Home, ChevronRight } from 'lucide-react';
+import { Users, Building, BookOpen, Calendar, LogOut, Eye, Menu, X, GraduationCap, Home, ChevronRight, Shield, FileText } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
 const Sidebar = () => {
@@ -67,6 +67,20 @@ const Sidebar = () => {
       label: 'PDF Çıktı', 
       color: 'ide-orange',
       description: 'Rapor ve çıktılar'
+    },
+    { 
+      to: '/duty-management', 
+      icon: Shield, 
+      label: 'Nöbet Yönetimi', 
+      color: 'ide-accent',
+      description: 'Nöbet programları'
+    },
+    { 
+      to: '/duty-reports', 
+      icon: FileText, 
+      label: 'Nöbet Raporları', 
+      color: 'ide-orange',
+      description: 'Nöbet raporları ve istatistikler'
     }
   ];
 
